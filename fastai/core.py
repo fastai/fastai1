@@ -145,7 +145,7 @@ class ItemBase():
     def apply_tfms(self, tfms:Collection, **kwargs):
         if tfms: raise Exception('Not implemented')
         return self
-    
+
 def download_url(url:str, dest:str, overwrite:bool=False, pbar:ProgressBar=None,
                  show_progress=True, chunk_size=1024*1024, timeout=4)->None:
     "Download `url` to `dest` unless it exists and not `overwrite`."
@@ -231,6 +231,10 @@ def array(a, *args, **kwargs)->np.ndarray:
     if not isinstance(a, collections.Sized) and not getattr(a,'__array_interface__',False):
         a = list(a)
     return np.array(a, *args, **kwargs)
+
+class EmptyLabel(ItemBase):
+    def __init__(self): self.obj,self.data = 0.,0.
+    def __str__(self):  return ''
 
 class Category(ItemBase):
     def __init__(self,data,obj): self.data,self.obj = data,obj
