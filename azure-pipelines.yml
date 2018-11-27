@@ -84,9 +84,10 @@ jobs:
       export PATH=`pwd`/custom/bin:$PATH
       # make the data dir local
       mkdir myfastai
-      ln -s myfastai ~/.fastai
+      ln -s `pwd`/myfastai ~/.fastai
       ls -l ~/.fastai
       py.test tests --cache-clear --junitxml=result.xml
+      make test
       ls -l ~/.fastai/
       ls -l ~/.fastai/data
       ls -l myfastai/
