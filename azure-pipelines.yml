@@ -144,7 +144,7 @@ jobs:
       conda uninstall -y fastai
       # install editable fastai, which tests the HEAD or PR
       pip install -e .[dev]
-      conda install -y -f regex=2018.11.07
+      conda install -y -f regex=2018.11.22 -c conda-forge
       conda install -y -f typing==3.6.6 urllib3==1.24.1 wheel==0.31.1
       conda install -y -f matplotlib=3.0.2 -c conda-forge
       conda install -y -f python=3.6.5
