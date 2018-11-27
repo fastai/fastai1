@@ -90,9 +90,10 @@ jobs:
       ulimit -c unlimited
       ulimit -c
       touch /cores/test && rm /cores/test
-      ls -l /cores
+      date
       ls -l /cores/
       py.test tests --cache-clear --junitxml=result.xml
+      ls -l /cores/
     displayName: 'Run tests'
     continueOnError: false
 
