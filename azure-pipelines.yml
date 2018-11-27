@@ -148,13 +148,10 @@ jobs:
 
   - bash: |
       conda create --yes --quiet --name fastai-cpu python=$PYTHON_VERSION
-      sudo mkdir /usr/local/miniconda/.condatmp
-      echo ". /usr/local/miniconda/etc/profile.d/conda.sh" >> ~/.bash_profile
     displayName: Create Anaconda environment
 
     # Install dependencies and fastai git HEAD or PR
   - script: |
-
       conda activate fastai-cpu
       conda install -y conda
       conda install -y pip setuptools
@@ -179,12 +176,14 @@ jobs:
 
     # Install Test deps
   - script: |
+      conda activate fastai-cpu
       conda install -y pytest pytest-runner
     displayName: 'Install test deps'
     continueOnError: false
 
      # Show Conda Build Env
   - script: |
+      conda activate fastai-cpu
       echo "cwd:" `pwd`
       python -c 'import fastai; fastai.show_install(0)'
       conda list | egrep -v '^#' | perl -ne 's/_/-/g; @x=split /\s+/, lc $_; print "$x[0]==$x[1]\n"' | sort | uniq
@@ -193,6 +192,7 @@ jobs:
 
     # Run Tests
   - script: |
+      conda activate fastai-cpu
       py.test tests --cache-clear --junitxml=result.xml
     displayName: 'Run tests'
     continueOnError: false
