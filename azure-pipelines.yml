@@ -147,6 +147,7 @@ jobs:
       conda install -y -f regex=2018.11.07
       conda install -y -f typing==3.6.6 urllib3==1.24.1 wheel==0.31.1
       conda install -y -f matplotlib=3.0.2 -c conda-forge
+      conda install -y -f python=3.6.5
 
       # workaround for matplotlib bug on macOS: https://stackoverflow.com/questions/21784641/installation-issue-with-matplotlib-python
       mkdir -p ~/.matplotlib
