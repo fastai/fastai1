@@ -92,8 +92,10 @@ jobs:
       ls -l /cores/
       export SEGFAULT_SIGNALS="all"
       #catchsegv py.test tests/test_vision_data_block_short.py --cache-clear --junitxml=result.xml
+      ls -l /lib/libSegFault.so
       LD_PRELOAD=/lib/libSegFault.so  py.test tests/test_vision_data_block_short.py --cache-clear --junitxml=result.xml
       ls -l /cores/
+      echo bt | lldb -c /cores/core.*
     displayName: 'Run tests'
     continueOnError: false
 
