@@ -62,7 +62,9 @@ jobs:
       conda install -y conda
       pip install --upgrade pip
       pip install --upgrade setuptools
-      pip install torch_nightly -f https://download.pytorch.org/whl/nightly/cpu/torch_nightly.html
+      conda install -y -c pytorch pytorch-nightly
+      conda install -y -c fastai torchvision-nightly
+      # pip install torch_nightly -f https://download.pytorch.org/whl/nightly/cpu/torch_nightly.html
       # test that we can install fastai package (and torchvision)
       pip install fastai
       pip uninstall -y fastai
@@ -88,9 +90,8 @@ jobs:
     # Run Tests
   - script: |
       py.test tests --cache-clear --junitxml=result.xml
-
     displayName: 'Run tests'
-    continueOnError: true
+    continueOnError: false
 
     # Publish test results to the Azure DevOps server
   - task: PublishTestResults@2
