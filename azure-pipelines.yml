@@ -47,6 +47,10 @@ jobs:
 
     # Install dependencies and fastai git HEAD or PR
   - script: |
+      # make the data dir local
+      mkdir myfastai
+      ln -s myfastai ~/.fastai
+      ls -l ~/.fastai
       export PYTHONUSERBASE=`pwd`/custom
       export PYTHONPATH=`pwd`/custom:$PYTHONPATH
       mkdir `pwd`/custom
@@ -80,8 +84,12 @@ jobs:
       export PYTHONUSERBASE=`pwd`/custom
       export PYTHONPATH=`pwd`/custom:$PYTHONPATH
       py.test tests --cache-clear --junitxml=result.xml
+      ls -l ~/.fastai/
+      ls -l ~/.fastai/data
+      ls -l myfastai/
+      ls -l myfastai/data
     displayName: 'Run tests'
-    continueOnError: false
+    continueOnError: true
 
     # Publish test results to the Azure DevOps server
   - task: PublishTestResults@2
