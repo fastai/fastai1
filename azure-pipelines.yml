@@ -45,7 +45,7 @@ jobs:
       versionSpec: '$(python.version)'
       architecture: 'x64'
 --prefix=$PREFIX_PATH
-    # Install dependencies and fastai git HEAD or PR
+     # Install dependencies and fastai git HEAD or PR
   - script: |
       export PYTHONPATH=`pwd`/custom:$PYTHONPATH
       export PATH=`pwd`/custom/bin:$PATH
