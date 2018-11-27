@@ -44,23 +44,22 @@ jobs:
     inputs:
       versionSpec: '$(python.version)'
       architecture: 'x64'
-
+--prefix=$PREFIX_PATH
     # Install dependencies and fastai git HEAD or PR
   - script: |
-      export PYTHONUSERBASE=`pwd`/custom
       export PYTHONPATH=`pwd`/custom:$PYTHONPATH
       export PATH=`pwd`/custom/bin:$PATH
       mkdir `pwd`/custom
-      python -m pip install --upgrade pip && pip install --user --upgrade setuptools
-      pip install --user --upgrade torch_nightly -f https://download.pytorch.org/whl/nightly/cpu/torch_nightly.html
+      python -m pip install --upgrade pip && pip install --prefix=`pwd`/custom --upgrade setuptools
+      pip install --prefix=`pwd`/custom torch_nightly -f https://download.pytorch.org/whl/nightly/cpu/torch_nightly.html
       # test that we can install fastai package (and torchvision)
-      pip install --user --upgrade fastai
+      pip install --prefix=`pwd`/custom fastai
       pip uninstall -y fastai
       # install editable fastai, which tests the HEAD or PR
-      pip install --user -e .[dev]
-      pip install --user --upgrade asn1crypto==0.24.0 cffi==1.11.5 cryptography==2.4.1 mkl-fft==1.0.6 mkl-random==1.0.1 mkl==2018.0.3 ninja==1.8.2 pycosat==0.6.3 pycparser==2.19 pyopenssl==18.0.0 pysocks==1.6.8 pytest-runner==4.2 pytest==4.0.0 ruamel-yaml==0.15.46
-      pip install --user --upgrade readline intel-openmp olefile libtiff
-      pip install --user --upgrade google
+      pip install --prefix=`pwd`/custom -e .[dev]
+      pip install --prefix=`pwd`/custom asn1crypto==0.24.0 cffi==1.11.5 cryptography==2.4.1 mkl-fft==1.0.6 mkl-random==1.0.1 mkl==2018.0.3 ninja==1.8.2 pycosat==0.6.3 pycparser==2.19 pyopenssl==18.0.0 pysocks==1.6.8 pytest-runner==4.2 pytest==4.0.0 ruamel-yaml==0.15.46
+      pip install --prefix=`pwd`/custom readline intel-openmp olefile libtiff
+      pip install --prefix=`pwd`/custom google
       # workaround for matplotlib bug on macOS: https://stackoverflow.com/questions/21784641/installation-issue-with-matplotlib-python
       mkdir -p ~/.matplotlib
       echo "backend: TkAgg" >> ~/.matplotlib/matplotlibrc
@@ -69,7 +68,6 @@ jobs:
 
      # Show PyPi Build Env
   - script: |
-      export PYTHONUSERBASE=`pwd`/custom
       export PYTHONPATH=`pwd`/custom:$PYTHONPATH
       export PATH=`pwd`/custom/bin:$PATH
       echo "cwd:" `pwd`
@@ -80,7 +78,6 @@ jobs:
 
     # Run Tests
   - script: |
-      export PYTHONUSERBASE=`pwd`/custom
       export PYTHONPATH=`pwd`/custom:$PYTHONPATH
       export PATH=`pwd`/custom/bin:$PATH
       # make the data dir local
