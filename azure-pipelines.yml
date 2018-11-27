@@ -62,17 +62,14 @@ jobs:
       conda install -y conda
       pip install --upgrade pip
       pip install --upgrade setuptools
-      conda install -y -c pytorch pytorch-nightly
-      conda install -y -c fastai torchvision-nightly
-      # pip install torch_nightly -f https://download.pytorch.org/whl/nightly/cpu/torch_nightly.html
+      #conda install -y -c pytorch pytorch-nightly
+      #conda install -y -c fastai torchvision-nightly
+      pip install torch_nightly -f https://download.pytorch.org/whl/nightly/cpu/torch_nightly.html
       # test that we can install fastai package (and torchvision)
       pip install fastai
       pip uninstall -y fastai
       # install editable fastai, which tests the HEAD or PR
       pip install -e .[dev]
-      pip install asn1crypto==0.24.0 cffi==1.11.5 cryptography==2.4.1 mkl-fft==1.0.6 mkl-random==1.0.1 mkl==2018.0.3 ninja==1.8.2 pycosat==0.6.3 pycparser==2.19 pyopenssl==18.0.0 pysocks==1.6.8 pytest-runner==4.2 pytest==4.0.0 ruamel-yaml==0.15.46
-      pip install readline intel-openmp olefile libtiff
-      pip install google
       # workaround for matplotlib bug on macOS: https://stackoverflow.com/questions/21784641/installation-issue-with-matplotlib-python
       mkdir -p ~/.matplotlib
       echo "backend: TkAgg" >> ~/.matplotlib/matplotlibrc
@@ -89,6 +86,7 @@ jobs:
 
     # Run Tests
   - script: |
+      ulimit -c unlimited
       py.test tests --cache-clear --junitxml=result.xml
     displayName: 'Run tests'
     continueOnError: false
