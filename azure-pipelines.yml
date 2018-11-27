@@ -148,6 +148,7 @@ jobs:
 
   - bash: |
       conda create --yes --quiet --name fastai-cpu python=$PYTHON_VERSION
+      echo ". /usr/local/miniconda/etc/profile.d/conda.sh" >> ~/.bash_profile
     displayName: Create Anaconda environment
 
     # Install dependencies and fastai git HEAD or PR
