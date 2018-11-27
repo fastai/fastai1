@@ -135,8 +135,8 @@ jobs:
       conda install -y conda
       conda install -y pip setuptools
       # pytorch + torchvision
-      conda install -y -c pytorch pytorch-nightly-cpu
-      conda install -y -c fastai torchvision-nightly-cpu
+      conda install -y -c pytorch pytorch-nightly
+      conda install -y -c fastai torchvision-nightly
       # test that we can install fastai package
       conda install -y -c fastai fastai
       conda uninstall -y fastai
