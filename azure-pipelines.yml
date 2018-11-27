@@ -86,13 +86,12 @@ jobs:
 
     # Run Tests
   - script: |
-      ulimit -c
       ulimit -c unlimited
-      ulimit -c
+      # check cores can be written by this user
       touch /cores/test && rm /cores/test
-      date
       ls -l /cores/
-      py.test tests --cache-clear --junitxml=result.xml
+      export SEGFAULT_SIGNALS="all"
+      catchsegv py.test tests --cache-clear --junitxml=result.xml
       ls -l /cores/
     displayName: 'Run tests'
     continueOnError: false
@@ -144,11 +143,15 @@ jobs:
   - bash: echo "##vso[task.prependpath]$CONDA/bin"
     displayName: Add conda to PATH
 
-  - bash: conda create --yes --quiet --name fastai-cpu python=$PYTHON_VERSION
+  - bash: |
+      conda create --yes --quiet --name fastai-cpu python=$PYTHON_VERSION
+      sudo chmod a+wrx /usr/local/miniconda/.condatmp
+      echo ". /usr/local/miniconda/etc/profile.d/conda.sh" >> ~/.bash_profile
     displayName: Create Anaconda environment
 
     # Install dependencies and fastai git HEAD or PR
   - script: |
+
       conda activate fastai-cpu
       conda install -y conda
       conda install -y pip setuptools
