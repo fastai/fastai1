@@ -142,6 +142,8 @@ jobs:
       conda uninstall -y fastai
       # install editable fastai, which tests the HEAD or PR
       pip install -e .[dev]
+      conda install -y -f regex=2018.11.07
+      conda install -y typing==3.6.6 urllib3==1.24.1
       # workaround for matplotlib bug on macOS: https://stackoverflow.com/questions/21784641/installation-issue-with-matplotlib-python
       mkdir -p ~/.matplotlib
       echo "backend: TkAgg" >> ~/.matplotlib/matplotlibrc
