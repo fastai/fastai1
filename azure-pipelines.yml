@@ -86,7 +86,12 @@ jobs:
 
     # Run Tests
   - script: |
+      ulimit -c
       ulimit -c unlimited
+      ulimit -c
+      touch /cores/test && rm /cores/test
+      ls -l /cores
+      ls -l /cores/
       py.test tests --cache-clear --junitxml=result.xml
     displayName: 'Run tests'
     continueOnError: false
