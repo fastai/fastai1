@@ -47,12 +47,9 @@ jobs:
 
     # Install dependencies and fastai git HEAD or PR
   - script: |
-      # make the data dir local
-      mkdir myfastai
-      ln -s myfastai ~/.fastai
-      ls -l ~/.fastai
       export PYTHONUSERBASE=`pwd`/custom
       export PYTHONPATH=`pwd`/custom:$PYTHONPATH
+      export PATH=`pwd`/custom/bin:$PATH
       mkdir `pwd`/custom
       python -m pip install --upgrade pip && pip install --user --upgrade setuptools
       pip install --user --upgrade torch_nightly -f https://download.pytorch.org/whl/nightly/cpu/torch_nightly.html
@@ -73,6 +70,7 @@ jobs:
   - script: |
       export PYTHONUSERBASE=`pwd`/custom
       export PYTHONPATH=`pwd`/custom:$PYTHONPATH
+      export PATH=`pwd`/custom/bin:$PATH
       echo "cwd:" `pwd`
       python -c 'import fastai; fastai.show_install(0)'
       pip list | egrep -v '^(Package|-----)' | perl -ne 's/_/-/g; @x=split /\s+/, lc $_; print "$x[0]==$x[1]\n"' | sort | uniq
@@ -83,6 +81,11 @@ jobs:
   - script: |
       export PYTHONUSERBASE=`pwd`/custom
       export PYTHONPATH=`pwd`/custom:$PYTHONPATH
+      export PATH=`pwd`/custom/bin:$PATH
+      # make the data dir local
+      mkdir myfastai
+      ln -s myfastai ~/.fastai
+      ls -l ~/.fastai
       py.test tests --cache-clear --junitxml=result.xml
       ls -l ~/.fastai/
       ls -l ~/.fastai/data
