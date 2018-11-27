@@ -146,7 +146,7 @@ jobs:
 
   - bash: |
       conda create --yes --quiet --name fastai-cpu python=$PYTHON_VERSION
-      sudo chmod a+wrx /usr/local/miniconda/.condatmp
+      sudo mkdir /usr/local/miniconda/.condatmp
       echo ". /usr/local/miniconda/etc/profile.d/conda.sh" >> ~/.bash_profile
     displayName: Create Anaconda environment
 
