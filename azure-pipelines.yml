@@ -50,7 +50,8 @@ jobs:
       export PYTHONPATH=`pwd`/custom:$PYTHONPATH
       export PATH=`pwd`/custom/bin:$PATH
       mkdir `pwd`/custom
-      python -m pip install --upgrade pip && pip install --prefix=`pwd`/custom --upgrade setuptools
+      pip install --prefix=`pwd`/custom --upgrade pip
+      pip install --prefix=`pwd`/custom --upgrade setuptools
       pip install --prefix=`pwd`/custom torch_nightly -f https://download.pytorch.org/whl/nightly/cpu/torch_nightly.html
       # test that we can install fastai package (and torchvision)
       pip install --prefix=`pwd`/custom fastai
