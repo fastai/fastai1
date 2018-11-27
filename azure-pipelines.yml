@@ -87,16 +87,8 @@ jobs:
 
     # Run Tests
   - script: |
-      # make the data dir local
-      mkdir myfastai
-      ln -s `pwd`/myfastai ~/.fastai
-      ls -l ~/.fastai
       py.test tests --cache-clear --junitxml=result.xml
-      make test
-      ls -l ~/.fastai/
-      ls -l ~/.fastai/data
-      ls -l myfastai/
-      ls -l myfastai/data
+
     displayName: 'Run tests'
     continueOnError: true
 
