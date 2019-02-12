@@ -11,7 +11,7 @@ Github. Parentheses after an item show the name or github id of the contributor
 of that change.
 
 
-
+Hot-fix for `Learner.lr_find()`
 
 ## 1.0.43.dev0 (Work In Progress)
 
