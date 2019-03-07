@@ -10,7 +10,15 @@ Note that the top-most release is changes in the unreleased master branch on
 Github. Parentheses after an item show the name or github id of the contributor
 of that change.
 
-## 1.0.47.dev0 (Work In Progress)
+## 1.0.47.post1 (2019-03-07)
+
+Hot Fixes:
+https://github.com/fastai/fastai/commit/982a16a9968376ba9ef93548d2111757289f97a3
+https://github.com/fastai/fastai/commit/ecd196a00346d31ea0368be0cf6a775167820d7c
+https://github.com/fastai/fastai/commit/d5c8be72d6fe14bac7933dfda0b1786442f0aa94
+https://github.com/fastai/fastai/commit/2c9f93531b5de0a50048ac2f76825c5bf37f85c
+
+## 1.0.47. (2019-03-06)
 
 ### Breaking changes:
 
