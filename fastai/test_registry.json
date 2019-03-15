@@ -1311,18 +1311,6 @@
             "test": "test_interp_shortcut"
         }
     ],
-    "fastai.vision.models.unet.DynamicUnet": [
-        {
-            "file": "tests/test_vision_models_unet.py",
-            "line": 39,
-            "test": "test_dynamic_unet_shape"
-        },
-        {
-            "file": "tests/test_vision_models_unet.py",
-            "line": 45,
-            "test": "test_unet_block_shapes"
-        }
-    ],
     "fastai.vision.transform._crop": [
         {
             "file": "tests/test_vision_transform.py",

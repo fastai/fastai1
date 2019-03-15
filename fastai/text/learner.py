@@ -60,12 +60,11 @@ class RNNLearner(Learner):
         if hasattr(encoder, 'module'): encoder = encoder.module
         torch.save(encoder.state_dict(), self.path/self.model_dir/f'{name}.pth')
 
-    def load_encoder(self, name:str, device:torch.device=None):
+    def load_encoder(self, name:str):
         "Load the encoder `name` from the model directory."
         encoder = get_model(self.model)[0]
-        if device is None: device = self.data.device
         if hasattr(encoder, 'module'): encoder = encoder.module
-        encoder.load_state_dict(torch.load(self.path/self.model_dir/f'{name}.pth', map=device))
+        encoder.load_state_dict(torch.load(self.path/self.model_dir/f'{name}.pth'))
         self.freeze()
 
     def load_pretrained(self, wgts_fname:str, itos_fname:str, strict:bool=True):
