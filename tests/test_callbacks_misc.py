@@ -5,6 +5,11 @@ from utils.fakes import *
 from utils.text import CaptureStdout
 
 def stop_after_n_batches_run_n_check(learn, bs, run_n_batches_exp):
+
+    # test that lr_find doesn't break
+    with CaptureStdout() as cs:
+        learn.lr_find()
+
     has_batches = len(learn.data.train_ds)//bs
     with CaptureStdout() as cs:
         learn.fit_one_cycle(3, max_lr=1e-2)
@@ -30,14 +35,14 @@ def test_stop_after_n_batches():
 
     print()
     # 1. global assignment
-    defaults_extra_callbacks_bak = defaults.extra_callbacks
-    defaults.extra_callbacks = [StopAfterNBatches(n_batches=run_n_batches)]
+    defaults_extra_callback_fns_bak = defaults.extra_callback_fns
+    defaults.extra_callback_fns = [partial(StopAfterNBatches, n_batches=run_n_batches)]
     learn = fake_learner(train_length=train_length, batch_size=bs)
     stop_after_n_batches_run_n_check(learn, bs, run_n_batches)
     # restore
-    defaults.extra_callbacks = defaults_extra_callbacks_bak
+    defaults.extra_callback_fns = defaults_extra_callback_fns_bak
 
     # 2. dynamic assignment
     learn = fake_learner(train_length=train_length, batch_size=bs)
-    learn.callbacks.append(StopAfterNBatches(n_batches=run_n_batches))
+    learn.callbacks.append(StopAfterNBatches(learn, n_batches=run_n_batches))
     stop_after_n_batches_run_n_check(learn, bs, run_n_batches)

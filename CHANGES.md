@@ -13,9 +13,15 @@ of that change.
 
 ## 1.0.52.dev0 (Work In Progress)
 
+### Breaking changes:
+
+`StopAfterNBatches` is now a `LearnerCallback` subclass - i.e. requires `Learner` as the first constructor arg. and it's now configured globally via `defaults.extra_callback_fns`. see the docs.
+
 ### New:
 
 ### Changed:
+
+- add support for `defaults.extra_callback_fns`
 
 ### Fixed:
 
@@ -24,7 +30,8 @@ of that change.
 
 ## 1.0.51 (2019-04-01)
 
-### Breaking changed:
+### Breaking changes:
+
 - Loading and saving. Added option to save/load from streams (buffers or file pointers).
 **Note** In all save/load related functions (`Learn.save`, `Learn.export`, `load_learner`, `DataBunch.save`, `load_data`), the parameter name `fname` was renamed to `file`.
 
