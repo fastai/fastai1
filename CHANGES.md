@@ -38,7 +38,7 @@ in mixed precision.
 
 - `get_language_model`: `pretrained_fnames` no longer requires `pretrained` be `False`
 - Fix several bugs in `SPProcessor` and add a load method
-
+- Fix bug with parallel returning things in a different order
 
 ## 1.0.52 (2019-04-26)
 
