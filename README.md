@@ -1,4 +1,5 @@
-[![Build Status](https://dev.azure.com/fastdotai/fastai/_apis/build/status/fastai.fastai)](https://dev.azure.com/fastdotai/fastai/_build/latest?definitionId=1)
+**NB: this repo is for v1 of the fastai library. [https://github.com/fastai/fastai](v2) is the current version. v1 is still supported for bug fixes, but will not receive new features.**
+
 [![pypi fastai version](https://img.shields.io/pypi/v/fastai.svg)](https://pypi.python.org/pypi/fastai)
 [![Conda fastai version](https://img.shields.io/conda/v/fastai/fastai.svg)](https://anaconda.org/fastai/fastai)
 
