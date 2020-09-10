@@ -8,7 +8,7 @@
 
 sidebar_d = {
     'Getting started': {
-        'Installation': 'https://github.com/fastai/fastai/blob/master/README.md#installation',
+        'Installation': 'https://github.com/fastai/fastai1/blob/master/README.md#installation',
         'Installation Extras': '/install',
         'Troubleshooting': '/troubleshoot',
         'Performance': '/performance',
@@ -113,7 +113,7 @@ sidebar_d = {
         'gen_doc.convert2html': '/gen_doc.convert2html',
     },
     'Library development': {
-        'Contributing': 'https://github.com/fastai/fastai/blob/master/CONTRIBUTING.md',
+        'Contributing': 'https://github.com/fastai/fastai1/blob/master/CONTRIBUTING.md',
         'Dev Notes': '/dev/develop',
         'GPU Notes': '/dev/gpu',
         'git notes': '/dev/git',

@@ -4,7 +4,7 @@ title: Installation
 
 ## Basic installation
 
-Please refer to [README](https://github.com/fastai/fastai/blob/master/README.md#installation) for bulk of the instructions
+Please refer to [README](https://github.com/fastai/fastai1/blob/master/README.md#installation) for bulk of the instructions
 
 ## CPU build
 
@@ -16,7 +16,7 @@ Generally, pytorch GPU build should work fine on machines that don't have a CUDA
 
    ```bash
    pip install http://download.pytorch.org/whl/cpu/torch-1.0.0-cp36-cp36m-linux_x86_64.whl
-   pip install fastai
+   pip install fastai==1.0.61
    ```
 
    Just make sure to pick the correct torch wheel url, according to the needed platform, python and CUDA version, which you will find [here](https://pytorch.org/get-started/locally/).
@@ -61,15 +61,15 @@ If for any reason you don't want to install all of `fastai`'s dependencies, sinc
 
    ```
    # pip
-   pip install --no-deps fastai
+   pip install --no-deps fastai==1.0.61
    # conda
-   conda install --no-deps -c fastai fastai
+   conda install --no-deps -c fastai fastai=1.0.61
    ```
 
 2. The rest of this section assumes you're inside the `fastai` git repo, since that's where `setup.py` resides. If you don't have the repository checked out, do:
 
    ```
-   git clone https://github.com/fastai/fastai
+   git clone https://github.com/fastai/fastai1
    cd fastai
    tools/run-after-git-clone
    ```
@@ -137,13 +137,13 @@ If for any reason you don't want to install all of `fastai`'s dependencies, sinc
 
    pip selective dependency installation:
    ```
-   pip install --no-deps fastai
+   pip install --no-deps fastai==1.0.61
    pip install $(python setup.py -q deps --dep-groups=core,vision)
    ```
 
    same for conda:
    ```
-   conda install --no-deps -c fastai fastai
+   conda install --no-deps -c fastai fastai=1.0.61
    conda install -c pytorch -c fastai $(python setup.py -q deps --dep-conda --dep-groups=core,vision)
    ```
 
@@ -174,7 +174,7 @@ As explained in [Development Editable Install](/dev/develop.html#development-edi
 
 * To accomplish the same for the cutting edge master git version:
 
-   `pip install "git+https://github.com/fastai/fastai#egg=fastai[dev]"`
+   `pip install "git+https://github.com/fastai/fastai1#egg=fastai[dev]"`
 
 
 

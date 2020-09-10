@@ -1,9 +1,9 @@
-*** How to maintain https://docs.fast.ai/ ***
+*** How to maintain https://fastai1.fast.ai/ ***
 
-fastai/docs/ is automatically mapped to https://docs.fast.ai/ so any changes committed to git will instantly appear on https://docs.fast.ai/
+fastai/docs/ is automatically mapped to https://fastai1.fast.ai/ so any changes committed to git will instantly appear on https://fastai1.fast.ai/
 
 All the needed information is here:
-https://docs.fast.ai/gen_doc.html#Update-the-documentation-website
+https://fastai1.fast.ai/gen_doc.html#Update-the-documentation-website
 
 * theme/stylesheets:
 

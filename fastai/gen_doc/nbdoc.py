@@ -18,9 +18,9 @@ __all__ = ['get_fn_link', 'link_docstring', 'show_doc', 'get_ft_names', 'md2html
            'is_enum', 'jekyll_note', 'jekyll_warn', 'jekyll_important', 'doc']
 
 MODULE_NAME = 'fastai'
-SOURCE_URL = 'https://github.com/fastai/fastai/blob/master/'
+SOURCE_URL = 'https://github.com/fastai/fastai1/blob/master/'
 PYTORCH_DOCS = 'https://pytorch.org/docs/stable/'
-FASTAI_DOCS = 'https://docs.fast.ai'
+FASTAI_DOCS = 'https://fastai1.fast.ai/'
 use_relative_links = True
 
 _typing_names = {t:n for t,n in fastai_types.items() if t.__module__=='typing'}

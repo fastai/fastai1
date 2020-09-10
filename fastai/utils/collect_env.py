@@ -169,13 +169,13 @@ def check_perf():
         if features.check_feature('libjpeg_turbo'):
             print("✔ libjpeg-turbo is on")
         else:
-            print("✘ libjpeg-turbo is not on. It's recommended you install libjpeg-turbo to speed up JPEG decoding. See https://docs.fast.ai/performance.html#libjpeg-turbo")
+            print("✘ libjpeg-turbo is not on. It's recommended you install libjpeg-turbo to speed up JPEG decoding. See https://fastai1.fast.ai/performance.html#libjpeg-turbo")
     else:
         print(f"❓ libjpeg-turbo's status can't be derived - need Pillow(-SIMD)? >= 5.4.0 to tell, current version {Image.PILLOW_VERSION}")
         # XXX: remove this check/note once Pillow and Pillow-SIMD 5.4.0 is available
         pillow_ver_5_4_is_avail = pypi_module_version_is_available("Pillow", "5.4.0")
         if pillow_ver_5_4_is_avail == False:
-            print("5.4.0 is not yet available, other than the dev version on github, which can be installed via pip from git+https://github.com/python-pillow/Pillow. See https://docs.fast.ai/performance.html#libjpeg-turbo")
+            print("5.4.0 is not yet available, other than the dev version on github, which can be installed via pip from git+https://github.com/python-pillow/Pillow. See https://fastai1.fast.ai/performance.html#libjpeg-turbo")
 
     # Pillow-SIMD check
     #TODO: same as above
@@ -183,7 +183,7 @@ def check_perf():
     if re.search(r'\.post\d+', pil_version):
         print(f"✔ Running Pillow-SIMD {pil_version}")
     else:
-        print(f"✘ Running Pillow {pil_version}; It's recommended you install Pillow-SIMD to speed up image resizing and other operations. See https://docs.fast.ai/performance.html#pillow-simd")
+        print(f"✘ Running Pillow {pil_version}; It's recommended you install Pillow-SIMD to speed up image resizing and other operations. See https://fastai1.fast.ai/performance.html#pillow-simd")
 
     # CUDA version check
     # compatibility table: k: min nvidia ver is required for v: cuda ver
@@ -210,4 +210,4 @@ def check_perf():
     else:
         print(f"❓ Running cpu-only torch version, CUDA check is not relevant")
 
-    print("\nRefer to https://docs.fast.ai/performance.html to make sense out of these checks and suggestions.")
+    print("\nRefer to https://fastai1.fast.ai/performance.html to make sense out of these checks and suggestions.")

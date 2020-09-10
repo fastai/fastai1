@@ -37,7 +37,7 @@ in that branch once. You can read more about it [here](/dev/develop.html#things-
 
 There are two types of source files: `*ipynb` and `*md` files.
 
-1. `*ipynb` notebook files, located under the directory `docs_src`, are the sources for most of the `*html` files on [docs.fast.ai](https://docs.fast.ai/). For example, [https://docs.fast.ai/data_block.html](/data_block.html) is generated from the [docs_src/data_block.ipynb](https://github.com/fastai/fastai/blob/master/docs_src/data_block.ipynb).
+1. `*ipynb` notebook files, located under the directory `docs_src`, are the sources for most of the `*html` files on [fastai1.fast.ai](https://fastai1.fast.ai/). For example, [https://fastai1.fast.ai/data_block.html](/data_block.html) is generated from the [docs_src/data_block.ipynb](https://github.com/fastai/fastai1/blob/master/docs_src/data_block.ipynb).
 
    While you can use a normal editor for editing this type of file, it's difficult to edit `json`-format files and it's very easy to break them. Instead, edit `*ipynb` files by opening them in your Jupyter Notebook environment.
 
@@ -49,7 +49,7 @@ There are two types of source files: `*ipynb` and `*md` files.
 
    **Note**: JupyterLab is currently not supported. If you missed this warning and have already edited `.ipynb` files in JupyterLab, you can [fix them](/dev/develop.html#unstripped-notebook-repair).
 
-2. `*md` text files, located at `docs/*.md` and `docs/*/*.md` require no Jupyter environment - i.e. they contain plain text formatted using the `markdown` format. Note, that unlike `*ipynb`, these are located in the `docs` directory. For example,  [https://docs.fast.ai/troubleshoot.html](/troubleshoot.html)'s source is [docs/troubleshoot.md](https://github.com/fastai/fastai/blob/master/docs/troubleshoot.md).
+2. `*md` text files, located at `docs/*.md` and `docs/*/*.md` require no Jupyter environment - i.e. they contain plain text formatted using the `markdown` format. Note, that unlike `*ipynb`, these are located in the `docs` directory. For example,  [https://fastai1.fast.ai/troubleshoot.html](/troubleshoot.html)'s source is [docs/troubleshoot.md](https://github.com/fastai/fastai1/blob/master/docs/troubleshoot.md).
 
    Edit these files in your editor. To validate the Markdown, use [grip](https://github.com/joeyespo/grip) or any other Markdown rendering/validating tool of your liking.
 
@@ -171,7 +171,7 @@ git commit docs_src/data_block.ipynb docs/data_block.html
 
 and then push the changes into the repo.
 
-Several minutes after the push, you will see the updated documents at [https://docs.fast.ai/data_block.html](https://docs.fast.ai/data_block.html).
+Several minutes after the push, you will see the updated documents at [https://fastai1.fast.ai/data_block.html](https://fastai1.fast.ai/data_block.html).
 
 ### Updating an existing function/class
 
@@ -220,7 +220,7 @@ and then reloading the notebook fixes the problem.
 
 ## Building the documentation website
 
-The https://docs.fast.ai website is comprised from documentation notebooks converted to `.html`, `.md` files, jekyll metadata, jekyll templates (including the sidebar).
+The https://fastai1.fast.ai/ website is comprised from documentation notebooks converted to `.html`, `.md` files, jekyll metadata, jekyll templates (including the sidebar).
 
 * `.md` files are automatically converted by GitHub Pages (requires no extra action)
 * the sidebar and other jekyll templates under `docs/_data/` are automatically deployed by GitHub Pages (requires no extra action)
@@ -357,7 +357,7 @@ python tools/build-docs -fl
 
 After you commit doc changes please validate that all the links and `#anchors` are correct.
 
-If it's the first time you are about to run the link checker, install the [prerequisites](https://github.com/fastai/fastai/blob/master/tools/checklink/README.md) first.
+If it's the first time you are about to run the link checker, install the [prerequisites](https://github.com/fastai/fastai1/blob/master/tools/checklink/README.md) first.
 
 After committing the new changes, first, wait a few minutes for GitHub Pages to sync, otherwise you'll be testing an outdated live site.
 
@@ -372,7 +372,7 @@ The script will be silent and only report problems as it finds them.
 
 Remember, that it's testing the live website, so if you detect problems and make any changes, remember to first commit the changes and wait a few minutes before re-testing.
 
-You can also test the site locally before committing your changes, please see: [README](https://github.com/fastai/fastai/blob/master/tools/checklink/README.md).
+You can also test the site locally before committing your changes, please see: [README](https://github.com/fastai/fastai1/blob/master/tools/checklink/README.md).
 
 To test the course-v3.fast.ai site, do:
 

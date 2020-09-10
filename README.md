@@ -9,7 +9,7 @@
 
 # fastai
 
-The fastai library simplifies training fast and accurate neural nets using modern best practices. See the [fastai website](https://docs.fast.ai) to get started. The library is based on research into deep learning best practices undertaken at [fast.ai](http://www.fast.ai), and includes \"out of the box\" support for [`vision`](https://docs.fast.ai/vision.html#vision), [`text`](https://docs.fast.ai/text.html#text), [`tabular`](https://docs.fast.ai/tabular.html#tabular), and [`collab`](https://docs.fast.ai/collab.html#collab) (collaborative filtering) models. For brief examples, see the [examples](https://github.com/fastai/fastai/tree/master/examples) folder; detailed examples are provided in the full [documentation](https://docs.fast.ai/). For instance, here's how to train an MNIST model using [resnet18](https://arxiv.org/abs/1512.03385) (from the [vision example](https://github.com/fastai/fastai/blob/master/examples/vision.ipynb)):
+The fastai library simplifies training fast and accurate neural nets using modern best practices. See the [fastai website](https://fastai1.fast.ai/) to get started. The library is based on research into deep learning best practices undertaken at [fast.ai](http://www.fast.ai), and includes \"out of the box\" support for [`vision`](https://fastai1.fast.ai/vision.html#vision), [`text`](https://fastai1.fast.ai/text.html#text), [`tabular`](https://fastai1.fast.ai/tabular.html#tabular), and [`collab`](https://fastai1.fast.ai/collab.html#collab) (collaborative filtering) models. For brief examples, see the [examples](https://github.com/fastai/fastai1/tree/master/examples) folder; detailed examples are provided in the full [documentation](https://fastai1.fast.ai/). For instance, here's how to train an MNIST model using [resnet18](https://arxiv.org/abs/1512.03385) (from the [vision example](https://github.com/fastai/fastai1/blob/master/examples/vision.ipynb)):
 
 ```python
 from fastai.vision import *
@@ -21,7 +21,7 @@ learn.fit(1)
 
 ## Note for [course.fast.ai](http://course.fast.ai) students
 
-This document is written for `fastai v1`, which we use for the current version the [course.fast.ai](http://course.fast.ai) deep learning courses. If you're following along with a course at [course18.fast.ai](http://course18.fast.ai) (i.e. the machine learning course, which isn't updated for v1) you need to use `fastai 0.7`;  please follow the installation instructions [here](https://forums.fast.ai/t/fastai-v0-install-issues-thread/24652).
+This document is written for `fastai v1`, which we use for version 3 of the [course.fast.ai](http://course.fast.ai) deep learning courses. If you're following along with a course at [course18.fast.ai](http://course18.fast.ai) (i.e. the machine learning course, which isn't updated for v1) you need to use `fastai 0.7`;  please follow the installation instructions [here](https://forums.fast.ai/t/fastai-v0-install-issues-thread/24652).
 
 ## Installation
 
@@ -31,18 +31,18 @@ This document is written for `fastai v1`, which we use for the current version t
 
 It's highly recommended you install `fastai` and its dependencies in a virtual environment ([`conda`](https://conda.io/docs/user-guide/tasks/manage-environments.html) or others), so that you don't interfere with system-wide python packages. It's not that you must, but if you experience problems with any dependency packages, please consider using a fresh virtual environment just for `fastai`.
 
-Starting with pytorch-1.x you no longer need to install a special pytorch-cpu version. Instead use the normal pytorch and it works with and without GPU. But [you can install the cpu build too](https://docs.fast.ai/install.html#cpu-build).
+Starting with pytorch-1.x you no longer need to install a special pytorch-cpu version. Instead use the normal pytorch and it works with and without GPU. But [you can install the cpu build too](https://fastai1.fast.ai/install.html#cpu-build).
 
-If you experience installation problems, please read about [installation issues](https://github.com/fastai/fastai/blob/master/README.md#installation-issues).
+If you experience installation problems, please read about [installation issues](https://github.com/fastai/fastai1/blob/master/README.md#installation-issues).
 
-If you are planning on using `fastai` in the jupyter notebook environment, make sure to also install the corresponding [packages](https://docs.fast.ai/install.html#jupyter-notebook-dependencies).
+If you are planning on using `fastai` in the jupyter notebook environment, make sure to also install the corresponding [packages](https://fastai1.fast.ai/install.html#jupyter-notebook-dependencies).
 
-More advanced installation issues, such as installing only partial dependencies are covered in a dedicated [installation doc](https://docs.fast.ai/install.html).
+More advanced installation issues, such as installing only partial dependencies are covered in a dedicated [installation doc](https://fastai1.fast.ai/install.html).
 
 ### Conda Install
 
 ```bash
-conda install -c pytorch -c fastai fastai
+conda install -c pytorch -c fastai fastai=1.0.61
 ```
 
 This will install the `pytorch` build with the latest `cudatoolkit` version. If you need a higher or lower `CUDA XX` build (e.g. CUDA 9.0), following the instructions [here](https://pytorch.org/get-started/locally/), to install the desired `pytorch` build.
@@ -54,12 +54,12 @@ conda uninstall --force jpeg libtiff -y
 conda install -c conda-forge libjpeg-turbo pillow==6.0.0
 CC="cc -mavx2" pip install --no-cache-dir -U --force-reinstall --no-binary :all: --compile pillow-simd
 ```
-If you only care about faster JPEG decompression, it can be `pillow` or `pillow-simd` in the last command above, the latter speeds up other image processing operations. For the full story see [Pillow-SIMD](https://docs.fast.ai/performance.html#faster-image-processing).
+If you only care about faster JPEG decompression, it can be `pillow` or `pillow-simd` in the last command above, the latter speeds up other image processing operations. For the full story see [Pillow-SIMD](https://fastai1.fast.ai/performance.html#faster-image-processing).
 
 ### PyPI Install
 
 ```bash
-pip install fastai
+pip install fastai==1.0.61
 ```
 
 By default pip will install the latest `pytorch` with the latest `cudatoolkit`. If your hardware doesn't support the latest `cudatoolkit`, follow the instructions [here](https://pytorch.org/get-started/locally/), to install a `pytorch` build that fits your hardware.
@@ -69,7 +69,7 @@ By default pip will install the latest `pytorch` with the latest `cudatoolkit`. 
 If a bug fix was made in git and you can't wait till a new release is made, you can install the bleeding edge version of `fastai` with:
 
 ```
-pip install git+https://github.com/fastai/fastai.git
+pip install git+https://github.com/fastai/fastai1.git
 ```
 
 ### Developer Install
@@ -77,8 +77,8 @@ pip install git+https://github.com/fastai/fastai.git
 The following instructions will result in a [pip editable install](https://pip.pypa.io/en/stable/reference/pip_install/#editable-installs), so that you can `git pull` at any time and your environment will automatically get the updates:
 
 ```bash
-git clone https://github.com/fastai/fastai
-cd fastai
+git clone https://github.com/fastai/fastai1
+cd fastai1
 tools/run-after-git-clone
 pip install -e ".[dev]"
 ```
@@ -90,7 +90,7 @@ jupyter notebook
 ```
 and executing an example notebook. For example load `examples/tabular.ipynb` and run it.
 
-Please refer to [CONTRIBUTING.md](https://github.com/fastai/fastai/blob/master/CONTRIBUTING.md) and [Notes For Developers](https://docs.fast.ai/dev/develop.html) for more details on how to contribute to the `fastai` project.
+Please refer to [CONTRIBUTING.md](https://github.com/fastai/fastai1/blob/master/CONTRIBUTING.md) and [Notes For Developers](https://fastai1.fast.ai/dev/develop.html) for more details on how to contribute to the `fastai` project.
 
 
 
@@ -124,7 +124,7 @@ If for any reason you can't use the prepackaged packages and have to build from 
 
 ## Installation Issues
 
-If the installation process fails, first make sure [your system is supported](https://github.com/fastai/fastai/blob/master/README.md#is-my-system-supported). And if the problem is still not addressed, please refer to the [troubleshooting document](https://docs.fast.ai/troubleshoot.html).
+If the installation process fails, first make sure [your system is supported](https://github.com/fastai/fastai1/blob/master/README.md#is-my-system-supported). And if the problem is still not addressed, please refer to the [troubleshooting document](https://fastai1.fast.ai/troubleshoot.html).
 
 If you encounter installation problems with conda, make sure you have the latest `conda` client (`conda install` will do an update too):
 ```bash
@@ -190,7 +190,7 @@ Top level files `environment.yml` and `environment-cpu.yml` belong to the old fa
 
 ## Contribution guidelines
 
-If you want to contribute to `fastai`, be sure to review the [contribution guidelines](https://github.com/fastai/fastai/blob/master/CONTRIBUTING.md). This project adheres to fastai's [code of conduct](https://github.com/fastai/fastai/blob/master/CODE-OF-CONDUCT.md). By participating, you are expected to uphold this code.
+If you want to contribute to `fastai`, be sure to review the [contribution guidelines](https://github.com/fastai/fastai1/blob/master/CONTRIBUTING.md). This project adheres to fastai's [code of conduct](https://github.com/fastai/fastai1/blob/master/CODE-OF-CONDUCT.md). By participating, you are expected to uphold this code.
 
 We use GitHub issues for tracking requests and bugs, so please see [fastai forum](https://forums.fast.ai/) for general questions and discussion.
 
@@ -198,7 +198,7 @@ The fastai project strives to abide by generally accepted best practices in open
 
 ## History
 
-A detailed history of changes can be found [here](https://github.com/fastai/fastai/blob/master/CHANGES.md).
+A detailed history of changes can be found [here](https://github.com/fastai/fastai1/blob/master/CHANGES.md).
 
 ## Copyright
 

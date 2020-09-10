@@ -2,8 +2,8 @@
 
 # if you're a fastai developer please make sure you do this:
 #
-#    git clone https://github.com/fastai/fastai
-#    cd fastai
+#    git clone https://github.com/fastai/fastai1
+#    cd fastai1
 #    tools/run-after-git-clone
 #
 

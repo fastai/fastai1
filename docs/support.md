@@ -4,11 +4,11 @@ title: Support
 
 ## Overview
 
-fastai support is provided via [github issue tracker](https://github.com/fastai/fastai/issues) and the [forums](https://forums.fast.ai/).
+fastai support is provided via [github issue tracker](https://github.com/fastai/fastai1/issues) and the [forums](https://forums.fast.ai/).
 
 Most issues, in particular problems with your code, should be discussed at the [forums](https://forums.fast.ai/). Either find an existing thread that's already discussing similar issues, or start a new thread.
 
-If you are pretty sure you found a bug in the `fastai` software please submit a bug report using [github issue tracker](https://github.com/fastai/fastai/issues).
+If you are pretty sure you found a bug in the `fastai` software please submit a bug report using [github issue tracker](https://github.com/fastai/fastai1/issues).
 
 Feature requests are best discussed on the [forums](https://forums.fast.ai/).
 
@@ -29,9 +29,9 @@ Before making a new issue report, please:
     ```
     and then repeat the steps and see whether the problem you wanted to report still exists.
 
-2.  Make sure [your platform is supported by `pytorch-1x`](https://github.com/fastai/fastai/blob/master/README.md#is-my-system-supported). You may have to build `pytorch` from source if it isn't.
+2.  Make sure [your platform is supported by `pytorch-1x`](https://github.com/fastai/fastai1/blob/master/README.md#is-my-system-supported). You may have to build `pytorch` from source if it isn't.
 
-3. Make sure you follow [the exact installation instructions](https://github.com/fastai/fastai/blob/master/README.md#installation). If you improvise and it works that's great, if it fails please RTFM ;)
+3. Make sure you follow [the exact installation instructions](https://github.com/fastai/fastai1/blob/master/README.md#installation). If you improvise and it works that's great, if it fails please RTFM ;)
 
 4. Check the [Troubleshooting](/troubleshoot.html) document.
 
@@ -82,10 +82,10 @@ If the resulting output is super long, please paste it to https://pastebin.com/ 
 
 ## PRs
 
-If you found a bug and know how to fix it, please, submit a PR with the fix [here](https://github.com/fastai/fastai/pulls).
+If you found a bug and know how to fix it, please, submit a PR with the fix [here](https://github.com/fastai/fastai1/pulls).
 
 If you'd like to contribute a new feature, please, discuss it on the [forums](https://forums.fast.ai/) first.
 
-Make sure to read [CONTRIBUTING](https://github.com/fastai/fastai/blob/master/CONTRIBUTING.md).
+Make sure to read [CONTRIBUTING](https://github.com/fastai/fastai1/blob/master/CONTRIBUTING.md).
 
 Thank you.
