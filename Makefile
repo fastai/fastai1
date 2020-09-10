@@ -328,7 +328,7 @@ backport-check: ## backport to master check
 	fi
 	$(eval log := $(shell git log --oneline $(start_rev)..origin/release-$(version) -- . ":(exclude)fastai/version.py" ":(exclude)CHANGES.md"))
 	@if [ -n "$(log)" ]; then\
-		echo "!!! These commits may need to be backported:\n\n$(log)\n\nuse 'git show <commit>' to review or go to https://github.com/fastai/fastai/compare/release-$(version) to do it visually\nFor backporting see: https://docs-dev.fast.ai/release#backporting-release-branch-to-master";\
+		echo "!!! These commits may need to be backported:\n\n$(log)\n\nuse 'git show <commit>' to review or go to https://github.com/fastai/fastai1/compare/release-$(version) to do it visually\nFor backporting see: https://docs-dev.fast.ai/release#backporting-release-branch-to-master";\
 	else\
 		echo "Nothing to backport";\
     fi

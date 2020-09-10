@@ -244,7 +244,7 @@ conda install -y conda
 conda install -y pip setuptools
 ```
 
-Now you can [install `fastai` prerequisites and itself](https://github.com/fastai/fastai/blob/master/README.md#conda-install) using `conda`.
+Now you can [install `fastai` prerequisites and itself](https://github.com/fastai/fastai1/blob/master/README.md#conda-install) using `conda`.
 
 The only thing you need to remember when you start using a virtual environment is that you must activate it before using it. So for example when you open a new console and want to start `jupyter`, instead of doing:
 
@@ -325,7 +325,7 @@ Please skip this section unless you have post- successful install update issues.
 
 Normally you'd update `fastai` by running `pip install -U fastai` or `conda update fastai`, using the same package manager you used to install it in first place (but in reality, either will work).
 
-If you use the [developer setup](https://github.com/fastai/fastai/blob/master/README.md#developer-install), then you need to do a simple:
+If you use the [developer setup](https://github.com/fastai/fastai1/blob/master/README.md#developer-install), then you need to do a simple:
 
 ```
 cd path/to/your/fastai/clone
@@ -376,13 +376,13 @@ print(sys.modules['fastai'])
 At times a quick hack can be used to get your first notebook working and then sorting out the setup. Say you checked out `fastai` to `/tmp/`:
 ```
 cd /tmp/
-git clone https://github.com/fastai/fastai
-cd fastai
+git clone https://github.com/fastai/fastai1
+cd fastai1
 ```
-So now you know that your *uninstalled* `fastai` is located under `/tmp/fastai/`. Next, put the following on the very top of your notebook:
+So now you know that your *uninstalled* `fastai1` is located under `/tmp/fastai1/`. Next, put the following on the very top of your notebook:
 ```
 import sys
-sys.path.append("/tmp/fastai")
+sys.path.append("/tmp/fastai1")
 import fastai
 ```
 and it should just work. Now, go and sort out the rest of the installation, so that you don't need to do it for every notebook.
@@ -489,7 +489,7 @@ it's possible that your pytorch build doesn't support the NVIDIA Driver you have
 
 For example, you may have a newer NVIDIA driver with an older pytorch CUDA build, which most of the time should work, as it should be backward compatible, but that is not always the case. So make sure that if you run a recent NVIDIA driver you install pytorch that is built against the latest CUDA version. Follow the instructions [here](https://pytorch.org/get-started/locally/).
 
-You will find the table of different CUDA versions and their NVDIA driver counterparts [here](https://github.com/fastai/fastai/blob/master/README.md#is-my-system-supported).
+You will find the table of different CUDA versions and their NVDIA driver counterparts [here](https://github.com/fastai/fastai1/blob/master/README.md#is-my-system-supported).
 
 
 
@@ -587,7 +587,7 @@ with the same results. Except this one (fit functions) is already protected, thi
 
 Note, that the trick is in running: `traceback.clear_frames(tb)` to free all `locals()` tied to the exception object.
 
-Note that these help functions don't make any special cases and will do the clearing for any exception. Which means that you will not be able to use a debugger if you use those, since an `locals()` will be gone. You can, of course, use the more complicated versions of these functions from [fastai.utils.ipython](https://github.com/fastai/fastai/blob/master/fastai/utils/ipython.py) which have more flexibility as explained in the previous section.
+Note that these help functions don't make any special cases and will do the clearing for any exception. Which means that you will not be able to use a debugger if you use those, since an `locals()` will be gone. You can, of course, use the more complicated versions of these functions from [fastai.utils.ipython](https://github.com/fastai/fastai1/blob/master/fastai/utils/ipython.py) which have more flexibility as explained in the previous section.
 
 If you need the same solution outside of the fastai environment, you can either copy-n-paste it from this section, or alternatively similar helper functions (a function decorator and a context manager) are available via the [ipyexperiments](https://github.com/stas00/ipyexperiments) project, inside the [ipyexperiments.utils.ipython](https://github.com/stas00/ipyexperiments/blob/master/docs/utils_ipython.md) module.
 

@@ -26,7 +26,7 @@ source:
 
   # Source from git
   # git_rev: v0.13.1
-  # git_url: https://github.com/fastai/fastai.git
+  # git_url: https://github.com/fastai/fastai1.git
 
 build:
   number: 1
@@ -47,7 +47,7 @@ requirements:
 # jupyter_contrib_nbextensions - only needed for internal tools - it's not on conda and requires too many of its own dependencies which aren't on conda either
 #
 # note: since we don't make separate py36 and py37 fastai releases, the only way to preserve the `dataclasses` dependency when building the package with py37 is not
-# have the # [py36] selector. `dataclasses` will be installed on py37 too, which is OK. Full details: https://docs.fast.ai/dev/release.html#the-problem-of-supporting-different-architectures
+# have the # [py36] selector. `dataclasses` will be installed on py37 too, which is OK. Full details:https://fastai1.fast.ai/dev/release.html#the-problem-of-supporting-different-architectures
   run:
     - dataclasses
     - beautifulsoup4
@@ -88,7 +88,7 @@ about:
   home: {{ data.get('url') }}
   license: {{ data['license'] }}
   license_family: APACHE
-  license_url: https://github.com/fastai/fastai/blob/master/LICENSE
+  license_url: https://github.com/fastai/fastai1/blob/master/LICENSE
   license_file: LICENSE
   summary: {{ data['description'] }}
   # description needs to have:
@@ -100,7 +100,7 @@ about:
   # - _ is special outside of block code, need to escape otherwise, but can't do that w/o jinja2 regex support since it'll break code blocks - so doing nothing at the moment.
   description: |
     {{ data['long_description'] | replace("\n", "\n    ") | replace("#", '\#')}}
-  doc_url: https://docs.fast.ai/
+  doc_url: https://fastai1.fast.ai/
   dev_url: {{ data.get('url') }}
 
 extra:

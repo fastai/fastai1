@@ -202,7 +202,7 @@ setup(
 
     license = "Apache Software License 2.0",
 
-    url = 'https://github.com/fastai/fastai',
+    url = 'https://github.com/fastai/fastai1',
 
     author = "Jeremy Howard",
     author_email = 'info@fast.ai',

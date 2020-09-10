@@ -349,9 +349,9 @@ Find what needs to be backported, there are a few ways to approach it:
 
 * alternative GUI way: checking what needs to be backported on github
 
-    If you want to use github presentation, go to the comparison page for the tag of the release https://github.com/fastai/fastai/compare/release-1.0.6 or the same in 3 click if you don't want to manually create it:
+    If you want to use github presentation, go to the comparison page for the tag of the release https://github.com/fastai/fastai1/compare/release-1.0.6 or the same in 3 click if you don't want to manually create it:
 
-    1. go to https://github.com/fastai/fastai
+    1. go to https://github.com/fastai/fastai1
     2. select the release branch in the left upper-ish corner
     3. click 'Compare' in the right upper-ish corner
 

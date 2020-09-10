@@ -9,7 +9,7 @@
 entries:
 - folders:
   - folderitems:
-    - external_url: https://github.com/fastai/fastai/blob/master/README.md#installation
+    - external_url: https://github.com/fastai/fastai1/blob/master/README.md#installation
       output: web,pdf
       title: Installation
     - output: web,pdf
@@ -260,7 +260,7 @@ entries:
     output: web
     title: Doc authoring
   - folderitems:
-    - external_url: https://github.com/fastai/fastai/blob/master/CONTRIBUTING.md
+    - external_url: https://github.com/fastai/fastai1/blob/master/CONTRIBUTING.md
       output: web,pdf
       title: Contributing
     - output: web,pdf

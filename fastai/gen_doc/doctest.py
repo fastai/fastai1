@@ -74,7 +74,7 @@ class TestRegistry:
 *** Attention ***
 Please include `this_tests` call in each of the following tests:
   {tests}
-For details see: https://docs.fast.ai/dev/test.html#test-registry""")
+For details see: https://fastai1.fast.ai/dev/test.html#test-registry""")
 
 # merge_registries helpers
 # merge dict of lists of dict

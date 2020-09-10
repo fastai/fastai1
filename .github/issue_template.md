@@ -1,4 +1,4 @@
-<!-- BEFORE POSTING AN ISSUE PLEASE MAKE SURE TO READ: https://docs.fast.ai/support.html -->
+<!-- BEFORE POSTING AN ISSUE PLEASE MAKE SURE TO READ: https://fastai1.fast.ai/support.html -->
 
 <!-- **Important:** We try our best to fix all reported issue. The main difficulty we have is not being able to read your mind. If you don't follow the steps below, we have to follow up asking you to supply the required information, but we have already asked you to do so, so please don't waste our time and yours and supply it in first place. If you don't, your issue will be closed. You are free to resubmit this time with the required information. Thank you for helping us help you. -->
 
@@ -25,15 +25,15 @@ or via your shell:
 ```
 python -m fastai.utils.show_install
 ```
-Double-check you use the latest version which you can find here: https://github.com/fastai/fastai/releases.
+Double-check you use the latest version which you can find here: https://github.com/fastai/fastai1/releases.
 
-It's also possible that the issue has already been fixed in git master, but hasn't been released yet, so if possible please try to see whether git master has it resolved. To install the git master do: `pip install git+https://github.com/fastai/fastai/`
+It's also possible that the issue has already been fixed in git master, but hasn't been released yet, so if possible please try to see whether git master has it resolved. To install the git master do: `pip install git+https://github.com/fastai/fastai1/`
 -->
 
 **To Reproduce**
 <!-- Steps to reproduce the behavior. Please give us a reproducible example so we can fix your bug.-->
 <!-- A gist to reproduce it is even better!-->
-<!-- If possible please add a new test for https://github.com/fastai/fastai/tree/master/tests/ that helps us reproduce the problem and will help with future regression testing. See https://docs.fast.ai/dev/test.html for details on how to run/write tests. -->
+<!-- If possible please add a new test for https://github.com/fastai/fastai1/tree/master/tests/ that helps us reproduce the problem and will help with future regression testing. See https://fastai1.fast.ai/dev/test.html for details on how to run/write tests. -->
 
 **Expected behavior**
 <!-- A clear and concise description of what you expected to happen. -->

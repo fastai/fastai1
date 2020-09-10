@@ -6,7 +6,7 @@ title: Notes For Developers
 
 Make sure you follow this recipe:
 
-    git clone https://github.com/fastai/fastai
+    git clone https://github.com/fastai/fastai1
     cd fastai
     tools/run-after-git-clone
 
@@ -82,7 +82,7 @@ Unfortunately, we can't enforce this, because github doesn't allow server-side h
 
 So it's your responsibility to watch the status of your commits at the commits page:
 
-* [fastai](https://github.com/fastai/fastai/commits)
+* [fastai](https://github.com/fastai/fastai1/commits)
 * [fastai_docs](https://github.com/fastai/fastai_docs/commits)
 * [course-v3](https://github.com/fastai/course-v3/commits)
 
@@ -244,7 +244,7 @@ and its [examples](https://pip.pypa.io/en/stable/reference/pip_install/#examples
 
 This section will demonstrate how the editable installs works with `fastai`, including some important nuances that are important to understand.
 
-First, make sure you're in the correct [python environment](https://docs.fast.ai/install.html#virtual-environment) (`conda activate fastai`, or whatever you called your environment if any, perhaps you're using a system-wide install, then you don't need to activate anything, though it's much safer to use a dedicated virtual env for working with `fastai`).
+First, make sure you're in the correct [python environment](https://fastai1.fast.ai/install.html#virtual-environment) (`conda activate fastai`, or whatever you called your environment if any, perhaps you're using a system-wide install, then you don't need to activate anything, though it's much safer to use a dedicated virtual env for working with `fastai`).
 
 Let's start by uninstalling `fastai`:
 ```
@@ -266,8 +266,8 @@ Several entries were removed to make the lists easier to compare.
 Now let's perform an editable install for `fastai`:
 ```
 cd ~/github
-git clone https://github.com/fastai/fastai
-cd fastai
+git clone https://github.com/fastai/fastai1
+cd fastai1
 pip install -e ".[dev]"
 ```
 

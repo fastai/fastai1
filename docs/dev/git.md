@@ -11,7 +11,7 @@ Chances are that you may need to know some git when using fastai - for example i
 
 While this guide is mostly suitable for creating PRs for any github project, it includes several steps specific to the `fastai` project repositories, which currently are:
 
-* [https://github.com/fastai/fastai](https://github.com/fastai/fastai)
+* [https://github.com/fastai/fastai1](https://github.com/fastai/fastai1)
 * [https://github.com/fastai/fastai_docs](https://github.com/fastai/fastai_docs)
 * [https://github.com/fastai/course-v3](https://github.com/fastai/course-v3)
 * [https://github.com/fastai/fastprogress](https://github.com/fastai/fastprogress)
@@ -20,14 +20,14 @@ If you already know how to make PRs, you only need to read: the "Step 3" and "St
 
 The following instructions use `USERNAME` as a github username placeholder. The easiest way to follow this guide is to copy-n-paste the whole section into a file, replace `USERNAME` with your real username and then follow the steps.
 
-All the examples in this guide are written for working with the [fastai repository](https://github.com/fastai/fastai). If you'd like to contribute to other `fastai`-project repositories, just replace `fastai` with that other repository name in the instructions below.
+All the examples in this guide are written for working with the [fastai1 repository](https://github.com/fastai/fastai1). If you'd like to contribute to other `fastai`-project repositories, just replace `fastai` with that other repository name in the instructions below.
 
 For the purpose of these examples, we will clone into a folder `fastai-fork`, to differentiate from `fastai` which you most likely already checked out to install it.
 
 Also don't get confused between the `fastai` github username, the `fastai` repository, and the `fastai` module directory, where the python code resides. The following url shows all three, in the order they have been mentioned:
 
 ```
-https://github.com/fastai/fastai/tree/master/fastai
+https://github.com/fastai/fastai1/tree/master/fastai
                      |       |                  |
                  username reponame        modulename
 ```
@@ -66,7 +66,7 @@ If you made the fork of the desired repository already, proceed to section 1b.
 
 If it's your first time, you just need to make a fork of the original repository:
 
-1. Go to [https://github.com/fastai/fastai](https://github.com/fastai/fastai) and in the right upper corner click on `[Fork]`. This will generate a fork of this repository, and you will be redirected to
+1. Go to [https://github.com/fastai/fastai1](https://github.com/fastai/fastai1) and in the right upper corner click on `[Fork]`. This will generate a fork of this repository, and you will be redirected to
  github.com/USERNAME/fastai.
 
 2. Clone the main repository fork. Click on `[Clone or download]` button to get the clone url and then clone your repository.
@@ -106,7 +106,7 @@ If it's your first time, you just need to make a fork of the original repository
    * Using HTTPS:
 
    ```
-   git remote add upstream https://github.com/fastai/fastai.git
+   git remote add upstream https://github.com/fastai/fastai1.git
    ```
 
    You can check your setup:
@@ -129,8 +129,8 @@ If it's your first time, you just need to make a fork of the original repository
    ```
    origin  https://github.com/USERNAME/fastai.git (fetch)
    origin  https://github.com/USERNAME/fastai.git (push)
-   upstream  https://github.com/fastai/fastai.git (fetch)
-   upstream  https://github.com/fastai/fastai.git (push)
+   upstream  https://github.com/fastai/fastai1.git (fetch)
+   upstream  https://github.com/fastai/fastai1.git (push)
    ```
 
    You can now proceed to step 2.
@@ -222,7 +222,7 @@ It's very important that you **always work inside a branch**. If you make any co
 
    Use an existing checkout, or make one:
    ```
-   git clone https://github.com/fastai/fastai fastai-fork
+   git clone https://github.com/fastai/fastai1 fastai-fork
    cd fastai-fork
    ```
    and make an editable install with the developer prerequisites:
@@ -468,19 +468,19 @@ but the first one is more reliable, `conda info`'s output may change down the ro
 
    You can filter commits by author in the commit view by appending param `?author=github_username`.
 
-   For example, the link [https://github.com/fastai/fastai/commits/master?author=jph00](https://github.com/fastai/fastai/commits/master?author=jph00) shows a list of commits `jph00` commits to the fastai repository.
+   For example, the link [https://github.com/fastai/fastai1/commits/master?author=jph00](https://github.com/fastai/fastai1/commits/master?author=jph00) shows a list of commits `jph00` commits to the fastai1 repository.
 
 * show commits by range: `master@{time}..master`
 
    You can create a compare view in GitHub by using the URL `github.com/user/repo/compare/{range}`. Range can be two SHAs like sha1…sha2 or two branch names like `master…my-branch`. Range is also smart enough to take time into consideration.
 
-   For example, you can filter a list of commits since yesterday by using format like `master@{1.day.ago}…master`. The link [https://github.com/fastai/fastai/compare/master@{1.day.ago}…master](https://github.com/fastai/fastai/compare/master@{1.day.ago}…master), for example, gets all commits since yesterday for the `fastai` repository:
+   For example, you can filter a list of commits since yesterday by using format like `master@{1.day.ago}…master`. The link [https://github.com/fastai/fastai1/compare/master@{1.day.ago}…master](https://github.com/fastai/fastai1/compare/master@{1.day.ago}…master), for example, gets all commits since yesterday for the `fastai` repository:
 
 * show `.diff` & `.patch`
 
    Add `.diff` or `.patch` to the URLs of compare view, pull request or commit page to get the diff or patch in text format.
 
-   For example, the link [https://github.com/fastai/fastai/compare/master@{1.day.ago}…master.patch](https://github.com/fastai/fastai/compare/master@{1.day.ago}…master.patch) gets the patch for all the commits since yesterday in the `fastai` repository.
+   For example, the link [https://github.com/fastai/fastai1/compare/master@{1.day.ago}…master.patch](https://github.com/fastai/fastai1/compare/master@{1.day.ago}…master.patch) gets the patch for all the commits since yesterday in the `fastai` repository.
 
 * line linking
 
@@ -1059,14 +1059,14 @@ git checkout <rev> -- dir1 dir2 file1 file2
 
 If somehow the HEAD of the branch got messed up and it got moved to some place in master, when someone by mistake merges it into master, here is how to reset it back. In this example we will use a release branch-1.0.36 with a postfix changes applied at a later time, resulting in tag `1.0.36.post`.
 
-1. find the last commit that was supposed to be the HEAD, e.g.: [https://github.com/fastai/fastai/commit/1c63e868d3d11e73d9f51f58cbd271e67a0fe983](https://github.com/fastai/fastai/commit/1c63e868d3d11e73d9f51f58cbd271e67a0fe983)
+1. find the last commit that was supposed to be the HEAD, e.g.: [https://github.com/fastai/fastai1/commit/1c63e868d3d11e73d9f51f58cbd271e67a0fe983](https://github.com/fastai/fastai1/commit/1c63e868d3d11e73d9f51f58cbd271e67a0fe983)
 
    Either use this to help find the right commit:
    ```
    git log origin/release-1.0.36
    ```
 
-   or using github's branch browse of a given tag ([1.0.36.post1](https://github.com/fastai/fastai/commits/1.0.36.post1) in this example).
+   or using github's branch browse of a given tag ([1.0.36.post1](https://github.com/fastai/fastai1/commits/1.0.36.post1) in this example).
 
 
 2. and now reset the branch's HEAD to it:

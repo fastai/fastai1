@@ -10,7 +10,7 @@ Most of this document is various notes explaining how to do all kinds of things 
 * Step 1. Setup and check you can run the test suite:
 
    ```
-   git clone https://github.com/fastai/fastai
+   git clone https://github.com/fastai/fastai1
    cd fastai
    tools/run-after-git-clone # python tools\run-after-git-clone on windows
    pip install -e ".[dev]"
@@ -50,7 +50,7 @@ Most of this document is various notes explaining how to do all kinds of things 
 
 * Step 4. Submit a PR with your new test(s)
 
-   You won't be able to PR from this plain checkout, so you need to switch to a forked version of fastai and create a new branch there. Follow the easy instructions [here](https://docs.fast.ai/dev/git.html#how-to-make-a-pull-request-pr) to accomplish that.
+   You won't be able to PR from this plain checkout, so you need to switch to a forked version of fastai and create a new branch there. Follow the easy instructions [here](https://fastai1.fast.ai/dev/git.html#how-to-make-a-pull-request-pr) to accomplish that.
 
    Note that this guide helps you to write tests with a plain git checkout, without needing to fork and branch, so that you can get results faster and easier. But once you're ready, then switch to your own fork and branch as explained in the guide above. You can just copy the files over to the new branch. Of course, feel free, to start with making a PR branch first - whatever is the easiest for you.
 
@@ -1078,8 +1078,8 @@ Remember, that coverage only indicated which parts of the code tests have exerci
 
 The two places you should check for notebooks to test your code with are:
 
- - [The fastai examples](https://github.com/fastai/fastai/tree/master/examples)
- - [The docs_src notebooks](https://github.com/fastai/fastai/tree/master/docs_src)
+ - [The fastai examples](https://github.com/fastai/fastai1/tree/master/examples)
+ - [The docs_src notebooks](https://github.com/fastai/fastai1/tree/master/docs_src)
 
 In each case, look for notebooks that have names starting with the application you're working on - e.g. 'text' or 'vision'.
 
@@ -1098,7 +1098,7 @@ To run a subset:
 ./run_tests.sh callback*
 ```
 
-There are a lot more details on this subject matter in this [document](https://github.com/fastai/fastai/blob/master/docs_src/nbval/README.md).
+There are a lot more details on this subject matter in this [document](https://github.com/fastai/fastai1/blob/master/docs_src/nbval/README.md).
 
 ### examples/*ipynb
 

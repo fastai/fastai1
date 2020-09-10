@@ -1,6 +1,6 @@
 steps:
 - name: 'gcr.io/cloud-builders/git'
-  args: ['clone', 'https://github.com/fastai/fastai.git', 'fastai-src']
+  args: ['clone', 'https://github.com/fastai/fastai1.git', 'fastai-src']
   id: 'clone'
 - name: 'gcr.io/cloud-builders/git'
   args: ['checkout', '${COMMIT_SHA}']

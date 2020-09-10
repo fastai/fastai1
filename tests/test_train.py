@@ -1,6 +1,6 @@
 """
 module: train.py - Model fitting methods
-docs  : https://docs.fast.ai/train.html
+docs  : https://fastai1.fast.ai/train.html
 """
 
 import pytest, fastai
