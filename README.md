@@ -1,4 +1,4 @@
-**NB: this repo is for v1 of the fastai library. [https://github.com/fastai/fastai](v2) is the current version. v1 is still supported for bug fixes, but will not receive new features.**
+**NB: this repo is for v1 of the fastai library. [v2](https://github.com/fastai/fastai) is the current version. v1 is still supported for bug fixes, but will not receive new features.**
 
 [![pypi fastai version](https://img.shields.io/pypi/v/fastai.svg)](https://pypi.python.org/pypi/fastai)
 [![Conda fastai version](https://img.shields.io/conda/v/fastai/fastai.svg)](https://anaconda.org/fastai/fastai)
